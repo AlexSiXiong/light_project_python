@@ -3,6 +3,7 @@
 import argparse
 
 
+# --------------------------------------------------
 def get_args() -> argparse.Namespace:
     """ get command-line arguments """
 
@@ -28,6 +29,7 @@ def get_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+# --------------------------------------------------
 def main() -> None:
     """Entrance"""
 
@@ -50,5 +52,6 @@ def main() -> None:
     print(f'You are bringing {formatted_food}.')
 
 
+# --------------------------------------------------
 if __name__ == '__main__':
     main()
