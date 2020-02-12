@@ -11,23 +11,51 @@ def get_args() -> argparse.Namespace:
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
 
-    parser.add_argument('command',
+    parser.add_argument('text',
                         metavar='str',
                         type=str,
-                        help='show this help message and exit')
+                        help='Input text')
 
     return parser.parse_args()
 
 
-digits_dictionary = {
-    1: 9,
-    2: 8,
-    3: 7,
-    4: 6,
-    5: 0,
-    6: 4,
-    7: 3,
-    8: 2,
-    9: 1,
-    0: 5,
-}
+# --------------------------------------------------
+def main() -> None:
+    """ Entrance """
+    args = get_args()
+    info = args.text
+    result = convert_text(info)
+    print(result)
+
+
+# --------------------------------------------------
+def convert_text(text) -> str:
+    """convert the text using dictionary"""
+
+    digits_dictionary = {
+        '1': '9',
+        '2': '8',
+        '3': '7',
+        '4': '6',
+        '5': '0',
+        '6': '4',
+        '7': '3',
+        '8': '2',
+        '9': '1',
+        '0': '5',
+    }
+    keys = digits_dictionary.keys()
+    result = ''
+
+    for i in text:
+        if i in keys:
+            result += digits_dictionary.get(i)
+        else:
+            result += i
+
+    return result
+
+
+# --------------------------------------------------
+if __name__ == '__main__':
+    main()
