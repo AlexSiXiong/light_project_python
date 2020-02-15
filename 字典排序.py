@@ -88,13 +88,19 @@
 
 import os
 import re
-import random
-import string
-from subprocess import getstatusoutput, getoutput
-def random_string():
-    """generate a random string"""
+# import random
+# import string
+# from subprocess import getstatusoutput, getoutput
+# def random_string():
+#     """generate a random string"""
+#
+#     k = random.randint(5, 10)
+#     return ''.join(random.choices(string.ascii_letters + string.digits, k=k))
+# out_file = random_string()
+# print(out_file)
 
-    k = random.randint(5, 10)
-    return ''.join(random.choices(string.ascii_letters + string.digits, k=k))
-out_file = random_string()
-print(out_file)
+sentence = 'Tom loves Tome\n Jack hate Jack'
+print(sentence)
+a = '\n'
+print(a.isspace())
+print(sentence)
