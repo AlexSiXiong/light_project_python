@@ -4,6 +4,7 @@
 import argparse
 import os
 
+
 # --------------------------------------------------
 def get_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
@@ -45,7 +46,6 @@ def main() -> None:
 
 
 # --------------------------------------------------
-
 if __name__ == '__main__':
     main()
 
