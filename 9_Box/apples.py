@@ -7,6 +7,7 @@ import os
 # 命令行读取多参数
 # choices参数来限制命令行输入参数
 
+
 # --------------------------------------------------
 def get_args():
     """ get command-line arguments"""
